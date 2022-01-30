@@ -1,0 +1,71 @@
+
+<div class="clearfix"></div>
+
+<script>
+  $(function() {
+    $('.nav-trigger').click(function() {
+          $('.header-nav-menu').toggle(1500);
+      })
+  });
+</script>
+    <div class="notifications">
+        <div class="notice"></div>
+    </div>
+
+    <div class="top">
+        <div class="top-main">
+            <div class="container">
+                <div class="row col-lg-6">
+                    <div class="form-fream">
+                        <div class="form-area">
+                            <p class="form-area-title mb-4">Potepan Shareでまだ体験したことのない旅をしよう</p>
+                            <%= link_to("物件一覧＆検索", "/posts/index",{class:"form-control btn-primary mb-4"}) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <div class="container">
+        <div class="panel-area m-5">
+            <h1 class="section-title">おすすめのエリア</h1>
+                <div class="row">
+                    <ul class="top-banner">
+                        <li>
+                            <div class="panel-item col-lg-3 col-6">
+                                <span>東京</span>
+                                <%= link_to image_tag("/img_tokyo.jpg",{class: "panel-image"}), "posts/tokyo"  %>
+                                <div class="shadow"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="panel-item col-lg-3 col-6">
+                                <span>大阪</span>
+                                <%= link_to image_tag("/img_osaka.jpg", {class: "panel-image"}),"/posts/oosaka" %> 
+                                <div class="shadow"></div>
+                            </div>  
+                        </li>
+
+                        <li>
+                            <div class="panel-item col-lg-3 col-6">
+                                <span>京都</span>
+                                <%= link_to image_tag("/img_kyoto.jpg", {class: "panel-image"}),"/posts/kyoto" %> 
+                                <div class="shadow"></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="panel-item col-lg-3 col-6">
+                                <span>札幌</span>
+                                <%= link_to image_tag("/img_sapporo.jpg", {class: "panel-image"}),"/posts/sapporo" %> 
+                                <div class="shadow"></div>
+                            </div>
+                        </li>
+           
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

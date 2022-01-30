@@ -1,0 +1,30 @@
+<div class="container device">
+    <div class="device_frame">
+        <p class="my-4">新しいアカウントを作成</p>
+            <% @user.errors.full_messages.each do |message| %>
+                <div class="error-form">
+                    <%= message %>
+                </div>
+            <% end %>
+        <div class="device_inner">
+            <%= form_tag("/users/create") do %>
+                <div class="field form-row">
+                    <div class="col-2 required-b pt-2"></div>
+                    <input class="form-control col-10 px-2" placeholder="ユーザー名" type="text" name="name" id="user_name" />
+                </div>
+                <div class="field form-row">
+                    <div class="col-2 required-b pt-2"></div>
+                    <input class="form-control col-10 px-2" placeholder="メールアドレス" type="email" value="" name="email" id="user_email" />
+                </div>
+                <div class="field form-row">
+                    <div class="col-2 required-b pt-2"></div>
+                    <input class="form-control col-10 px-2" placeholder="パスワード" type="password" name="password" id="user_password" />
+                </div>
+                <div class="actions">
+                    <input type="submit"  value="新しいアカウントを作成" class="form-control btn-primary my-4 "  />
+                </div>
+            <% end %>
+            <%= link_to("すでにアカウントをお持ちの方はログイン", "/login") %>
+        </div>
+    </div>
+</div>
