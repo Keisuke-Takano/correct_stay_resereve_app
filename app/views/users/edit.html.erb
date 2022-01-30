@@ -1,0 +1,26 @@
+<div class="device_frame">
+    <h2 class="mb-3">アカウント編集</h2>
+    <div class="device_inner">
+        <%= form_tag("/users/update") do %>
+            <div class="field">
+                <div class="form-group">
+                <label for="user_email">メールアドレス</label>
+                <input class="form-control" type="email" value="<%= @current_user.email %>" name="email" id="user_email" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="form-group">
+                <label for="user_password">変更後パスワード（変更する場合のみ入力）</label>
+                <input class="form-control" type="password" name="password" id="user_password" />
+                </div>
+            </div>
+            <div class="actions">
+                <input type="submit" value="更新" class="form-control btn-primary my-4" />
+            </div>
+        <% end %>
+
+        <div class="actions">
+          <%= link_to("戻る", "/users/account", {class:"btn btn-outline-secondary form-control"}) %>
+        </div>
+    </div>
+</div>

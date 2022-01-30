@@ -1,0 +1,32 @@
+<div class = "main" />
+    <ul class="aaa">
+        <li class="active"><%= link_to("アカウント", "/users/account") %></li>
+        <li class=""><%= link_to("プロフィール", "/users/profile") %></li>
+    </ul>
+    <div class="user-view">
+        <div class="user-view-box">
+            <div class="update-content">
+                <div class="row">
+                    <h5>アカウント:<%= @current_user.name %></h5>
+                </div>
+            </div>
+            <div class="update-content">
+                <div class="row">
+                    <label class="col-md-3" for="email">メールアドレス:</label>
+                    <div class="col-md-9"><%= @current_user.email %></div>
+                </div>
+            </div>
+            <div class="update-content">
+                <div class="row">
+                    <label class="col-md-3" for="password">パスワード:</label>
+                    <div class="col-md-9"><%= @current_user.password %></div>
+                </div>
+            </div>
+            <div class="update-content">
+                <div class="row">
+                    <%= link_to("編集", "/users/edit",{class:"col-md-2 btn btn-primary mx-3"}) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

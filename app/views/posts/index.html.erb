@@ -1,0 +1,31 @@
+<div class="search">
+  <h1>エリア検索</h1>
+  <%= search_form_for @q, url: "/posts/search" do |f| %>
+    <%= f.label :place_cont, 'エリア' %>
+    <%= f.search_field :place_cont %>
+    <br>
+    <%= f.submit '検索' %>
+  <% end %>
+
+  <h1>キーワード検索</h1>
+  <%= search_form_for @q, url: "/posts/search" do |f| %>
+    <%= f.label :room_introduction_cont, 'キーワード' %>
+    <%= f.search_field :room_introduction_or_room_name_cont  %>
+    <br>
+    <%= f.submit '検索' %>
+  <% end %>
+</div>
+
+<div class="f-container">
+  <% @posts.each do |post| %>
+    <%= link_to("/posts/#{post.id}") do %>
+      <div class="f-item">
+        <img class="room-images" src= "<%= "/post_image/#{post.room_image}" %>" >
+        <p class="room-name"><%= post.room_name %></p>
+        <p class="room-place"><%= post.place %></p>
+        <p class="price">¥<%= post.price %></p>
+      </div>
+    <% end %>
+  <% end %>
+    
+</div>

@@ -1,0 +1,22 @@
+<div class="device_frame">
+    <p class="my-4">ログイン</p>
+    <div class="device_inner">
+        <% if @error_message %>
+            <p><%= @error_message %></p>
+        <% end %>
+        <%= form_tag("/login") do %>
+            <div class="field form-row">
+                <div class="col-2 required-b pt-2"></div>
+                <input class="form-control col-10 px-2" placeholder="メールアドレス" type="email" name="email" id="user_email" />
+            </div>
+            <div class="field form-row">
+                <div class="col-2 required-b pt-2"></div>
+                <input class="form-control col-10 px-2" placeholder="パスワード" type="password" name="password" id="user_password"  />
+            </div>
+            <div class="actions">
+                <input type="submit" name="commit" value="ログイン" class="form-control btn-primary my-4 "  />
+            </div>
+        <% end %>
+        <%= link_to("新しいアカウントを作成", "/signup") %>
+    </div>
+</div>

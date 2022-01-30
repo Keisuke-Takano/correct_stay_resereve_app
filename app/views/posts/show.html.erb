@@ -1,0 +1,24 @@
+<div class="detail">
+    <img class="room-images2" src= "<%="/post_image/#{@post.room_image}" %>" >
+    <div class="post-user-name">
+        <img class="mx-3 p-1 host-icon nav-trigger" src="<%= "/#{@user.image_name}" %>">
+    </div>
+    <p class="room-name"><%= @post.room_name %></p>
+    <p class="room-place2"><%= @post.place %></p>
+    <p class="room-introdution"><%= @post.room_introduction %></p>
+    
+</div>
+
+<div class="menu">
+    <%= form_tag("/reservations/#{@post.id}/create") do %>
+        <div><p class="price">¥<%= @post.price %>/日</p></div>
+        <p class="kaishi">開始日</p>
+        <div><input class="start_date" name="start_date" type="date" ></div>
+        <p>終了日</p>
+        <div><input class="finish_date" name="end_date" type="date" ></div>
+        <p>人数</p>
+        <div><input class="number_of_people" name="number_of_people" type="integer"></div>
+        <input type="submit" value="予約する" class="col-md-2 btn btn-primary mx-3" id="botan" />
+    <% end %>
+</div>
+

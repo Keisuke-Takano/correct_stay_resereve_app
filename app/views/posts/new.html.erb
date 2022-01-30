@@ -1,0 +1,49 @@
+<div class="col-lg-2 user-nav user-nav-mobile d-lg-none">
+    <ul class="aaa">
+        <li class=""><%= link_to("基本情報", "/posts/new") %></li>
+    </ul>
+</div>
+
+<div class="col-lg-10 user-view">
+    <div class="user-view-box">
+        <div class="update-content">
+            <div class="row">
+                <h5>ルーム情報登録</h5>
+            </div>
+        </div>
+                
+
+        <%= form_tag("/posts/create",{multipart: true}) do %>
+            <div class="update-content">
+                <div class="row">
+                    <label class="col-md-3 required-a" >ルーム名</label>
+                    <input class="mb-4 col-md-9" name="room_name" id="user_image_name" />
+                </div>
+            </div>
+            <div class="update-content">
+                <div class="row">
+                    <label class="col-md-3 required-a" for="name">ルーム紹介</label>
+                    <textarea class="form-control mb-4 col-md-9" type="text" name="room_introduction"></textarea>
+                </div>
+            </div>
+            <div class="update-content">
+                <div class="row">
+                    <label class="col-md-3 required-a" for="introduction">料金</label>
+                    <input rows="5" class="form-control mb-4 col-md-9" name="price">
+                </div>
+            </div>
+            <div class="update-content">
+                <div class="row">
+                    <label class="col-md-3 required-a" for="introduction">住所</label>
+                    <input rows="5" class="form-control mb-4 col-md-9" name="place">
+                </div>
+            </div>
+            <div class="update-content">
+                <div class="row">
+                    <input type="submit" value="登録" class="col-md-2 btn btn-primary mx-3" />
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+    

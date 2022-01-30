@@ -1,0 +1,14 @@
+<div class="f-container">
+    <% @results.each do |result| %>
+        <%= link_to ("/posts/#{result.id}") do %>
+            <div class="f-item">
+                <img class="room-images" src= "<%="/post_image/#{result.room_image}" %>" >
+                <p class="room-name"><%= result.room_name %></p>
+                <p class="room-place"><%= result.place %></p>
+                <p class="price">¥<%= result.price %></p>
+            </div>
+        <% end %>
+    <% end %>
+</div>
+
+

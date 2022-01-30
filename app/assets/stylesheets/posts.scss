@@ -1,0 +1,87 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.f-container {
+    display: flex;
+    flex-wrap:wrap-reverse; 
+     
+}
+
+.f-item{
+    margin: 30px 30px;
+    height: 330px;
+    width: 270px;
+    border: solid 2px gray;
+}
+
+.room-name{
+    color: gray;
+}
+
+.room-images{
+    height: 200px;
+    width: 270px;
+}
+
+.room-images2{
+    width: 100%;
+}
+
+.price{
+  float: right;
+   margin-right: 10px;
+}
+
+.detail {
+    border: 0.5px solid black;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.detail p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.room-place2{
+    padding-bottom: 20px;
+    border-bottom: solid 0.5px gray;
+}
+
+.menu{
+    border: solid 0.5px gray;
+    position: absolute;
+    top:130px;
+    right: 100px;
+    width: 200px;
+}
+
+.price{
+    margin-bottom: 30px;
+}
+
+.kaishi{
+    margin-top: 70px;
+}
+
+#botan{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.editer{
+    margin: 50px auto;
+}
+.edit-btn{
+    
+    right: 30px;
+    background-color: rgb(0, 133, 241);
+    color: white;
+    font-size: 14px;
+    padding: 4px 4px;
+}
+.search{
+    text-align: center;
+}

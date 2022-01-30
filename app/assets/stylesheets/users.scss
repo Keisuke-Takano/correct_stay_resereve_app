@@ -1,0 +1,18 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.parent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.child{
+    border: 2px solid red;
+    margin-bottom: 30px;
+}
+.child th{
+    padding-right: 40px;
+    border: 0.1px solid gray;
+}
